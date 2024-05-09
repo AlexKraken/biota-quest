@@ -2,13 +2,20 @@
 name = "biota-quest"
 version = "0.1.0"
 description = ""
-authors = ["Alex Kraken Hawthorne <19832622+AlexKraken@users.noreply.github.com>"]
+authors = [
+    "Alex Kraken Hawthorne <19832622+AlexKraken@users.noreply.github.com>",
+]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 django = "^5.0.6"
+pytest = "^8.2.0"
+pytest-django = "^4.8.0"
 
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "biota_quest.settings"
+pythonpath = ". src"
 
 [build-system]
 requires = ["poetry-core"]
